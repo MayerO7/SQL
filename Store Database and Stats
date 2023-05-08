@@ -1,0 +1,18 @@
+Create a store database
+
+CREATE TABLE odessa_store (id INTEGER PRIMARY KEY, "item_name" TEXT, "quantity" INTEGER, "item_number" INTEGER, "cost" INTEGER);
+
+INSERT INTO odessa_store VALUES (1, "sweater", 15, 38475, 30);
+INSERT INTO odessa_store VALUES (2, "pants", 25, 47485, 40);
+INSERT INTO odessa_store VALUES (3, "socks", 30, 193847, 10);
+INSERT INTO odessa_store VALUES (4, "shirts", 40, 38283, 30);
+INSERT INTO odessa_store VALUES (5, "shorts", 55, 10385, 30);
+
+Display store database:
+SELECT * FROM odessa_store;
+
+Display quantity of all items in store:
+SELECT SUM(quantity) FROM odessa_store;
+
+Order store stock by item number:
+SELECT * FROM odessa_store ORDER BY item_number
